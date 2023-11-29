@@ -1,0 +1,179 @@
+/* I will accept with pleasure the wishes and recommendations for improving this example. */
+
+/*----FONT----*/
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+
+/*----FOR ALL----*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*----HTML, BODY----*/
+html {
+    min-height: 100vh;
+    background: #518070;
+    background: -webkit-linear-gradient(180deg, rgba(20, 136, 99, 0.75) 21%, rgba(208, 193, 97, 0.65) 40%, rgba(221, 133, 47, 0.90) 91%);
+    background: -moz-linear-gradient(180deg, rgba(20, 136, 99, 0.75) 21%, rgba(208, 193, 97, 0.65) 40%, rgba(221, 133, 47, 0.90) 91%);
+    background: linear-gradient(180deg, rgba(20, 136, 99, 0.75) 21%, rgba(208, 193, 97, 0.65) 40%, rgba(221, 133, 47, 0.90) 91%);
+    font-size: 17px;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    color: #272727;
+}
+
+/*----CONTAINER----*/
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/*----SECTION APPLICATION----*/
+.application {
+    margin: 7% 0 0 0;
+    text-align: center;
+
+}
+
+.application__heading {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    color: #ddb725;
+    text-shadow: 0px 3px 7px #000000;
+}
+
+/*----FORM----*/
+.application__form {margin: 6% 0 6% 0;}
+
+.form{
+    display: inline-block;
+    position: relative;
+    padding: 35px;
+    width: 390px;
+    border: 4px double #0c0c0c;
+    background: rgba(221, 183, 37, 0.5);
+}
+
+.form__txt {
+    padding: 5% 0 5% 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.form__field {
+    outline: 0;
+    margin: 6% 0 0 8%;
+    padding: 0 32px 0 32px;
+    width: 88%;
+    height: 40px;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #272727;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid #272727;
+}
+
+.form__field::-webkit-input-placeholder {
+    color: rgba(39, 39, 39, 0.85);
+    font-weight: 300;
+    font-size: 0.99rem;
+
+}
+.form__field::-moz-placeholder {
+    color: rgba(39, 39, 39, 0.85);
+    font-weight: 300;
+    font-size: 0.99rem;
+
+}
+.form__field:-moz-placeholder {
+    color: rgba(39, 39, 39, 0.85);
+    font-weight: 300;
+    font-size: 0.99rem;
+}
+.form__field:-ms-input-placeholder {
+    color: rgba(39, 39, 39, 0.85);
+    font-weight: 300;
+    font-size: 0.99rem;
+}
+.form__field::placeholder {
+    color: rgba(39, 39, 39, 0.85);
+    font-weight: 300;
+    font-size: 0.99rem;
+}
+
+.form__field_active:focus::-webkit-input-placeholder {color: transparent;}
+.form__field_active:focus::-moz-placeholder {color: transparent;}
+.form__field_active:focus:-moz-placeholder {color: transparent;}
+.form__field_active:focus:-ms-input-placeholder {color: transparent;}
+.form__field_active:focus::placeholder {color: transparent;}
+
+    /*icon for form*/
+.form__icon {font-size: 1.3rem;}
+.form__icon.form__icon_big {font-size: 4.1rem;}
+.form__icon_position {
+    position: relative;
+    margin: 0 -45px 0 0;
+    left: 11px;
+    vertical-align: text-top;
+}
+
+    /*form button*/
+.form__btn {
+    margin: 13% 0 0 0;
+    padding: 11px 40px 11px 40px;
+    border: 0;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: #272727;
+    color: rgba(222, 181, 73, 0.85);
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.form__btn_hover:hover {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    background: #2b2b2b;
+    color: rgba(78, 168, 138, 1);
+    -webkit-box-shadow: 0px 0px 5px 0px rgb(30, 30, 30);
+            box-shadow: 0px 0px 5px 0px rgb(30, 30, 30);
+}
+
+    /*form notification*/
+.form__notice-box{
+    display: none;
+    padding: 8px;
+    position: absolute;
+    top: 109px;
+    right: 41px;
+    background: #a90909;
+    color: #ffffff;
+    font-size: 0.88rem;
+    width: 300px;
+    -webkit-box-shadow: 0px 5px 8px -2px #272727;
+            box-shadow: 0px 5px 8px -2px #272727;
+
+}
+
+/* USER INTERACTION WITH FORM FIELDS */
+.form__field_active:focus:required+.form__notice-box {display: block;}
+.form__field_active:focus:required:valid+.form__notice-box {display: none;}
+.form__field_active:required:invalid {color: #a90909;}
+
+:invalid {
+    box-shadow: none;
+}
